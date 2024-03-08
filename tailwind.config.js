@@ -8,7 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        typewriter: ["Cutive Mono", "monospcae"],
+        typewriter: ["Cutive Mono", "monospace"],
+        handwriting: ["Satisfy", "cursive"],
+        display: ["Inter Tight", "sans-serif"],
+        solid: ["Rubik Mono One", "monospace"],
+        poppins: ["Poppins", "sans-serif"],
+        
       },
     },
   },
