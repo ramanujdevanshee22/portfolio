@@ -9,7 +9,7 @@ export default function NavBar() {
   const pathName = usePathname();
 
   return (
-    <div className="border border-red-200 z-30   ">
+    <div className="z-30   ">
       <div
         onClick={() => setOpen(!open)}
         className="p-4 space-y-2  bg-opacity-55 absolute top-0 left-0 z-20"
@@ -17,23 +17,23 @@ export default function NavBar() {
         {open ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-9 text-white"
+            className="h-8 w-9 text-white "
             fill="none"
-            viewBox="0 0 24 24"
+            viewBox="0 0 25 25"
             stroke="currentColor"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={3}
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
         ) : (
           <>
-            <span className="block w-9 h-1 bg-gray-100"></span>
-            <span className="block w-9 h-1 bg-gray-100"></span>
-            <span className="block w-9 h-1 bg-gray-100"></span>
+            <span className="block w-8 h-1 bg-gray-100 rounded-xl"></span>
+            <span className="block w-8 h-1 bg-gray-100 rounded-xl"></span>
+            <span className="block w-8 h-1 bg-gray-100 rounded-xl"></span>
           </>
         )}
       </div>
