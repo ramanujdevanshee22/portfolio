@@ -3,6 +3,15 @@ import Education from "../../../../public/education.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+const education = [
+  { qualification: "Bachelor of Engineering", location: "Leelaben Dasrathbhai Ramdas Patel Institute of Technology & Research, Gandhinagar", result: "CGPA: 8.3" },
+  { qualification: "Higher Secondary Certficate", location: "Shri N.P. Bhalodia High School, Junagadh", result: "Percentage: 58%" },
+  { qualification: "Secondary School Certificate", location: "Shri N.P. Bhalodia High School, Junagadh", result: "Percentage: 90%" },
+
+]
+
+
+
 const EducationPage = () => {
   const [showInfo, setShowInfo] = useState(false);
 
@@ -28,28 +37,18 @@ const EducationPage = () => {
       </div>
 
       <div className="w-[70%] flex flex-col items-center">
-        <div className="text-5xl underline underline-offset-4 font-semibold font-poppins mt-14">Education</div>
+        <div className="text-5xl underline underline-offset-4 font-semibold font-poppins mt-14 text-sky-950">Education</div>
 
         <ul className="mt-6">
 
-          <div className=" border p-4 shadow-lg rounded-lg mt-6 hover:transform hover:scale-105 ransition-all duration-500 ease-in-out">
-            <li className={`list-disc transition-all duration-500 ease-in-out animate-pulse text-2xl  font-handwriting ${showInfo ? "mt-1 list-disc animate-none" : ""}`}>{showInfo && "Bachelor of Engineering"}</li>
-            <li className="font-mono tracking-wider">{showInfo && " Leelaben Dashrathbhai Ramdas Patel Institue of Technology and Research, Gandhinagar"}</li>
-            <li className="font-mono tracking-wider">{showInfo && " CGPA: 8.3"}</li>
-          </div>
+          {education.map(data => (
+            <div className=" border p-4 shadow-md shadow-slate-500 rounded-lg mt-6 hover:transform hover:scale-105 transition-all duration-500 ease-in-out bg-slate-500 bg-opacity-10">
+              <li className={`transition-all duration-500 ease-in-out  text-2xl font-handwriting ${showInfo ? "mt-1 list-disc animate-none text-slate-900 " : ""}`}>{showInfo && data.qualification}</li>
+              <li className="font-mono tracking-wider text-slate-500">{showInfo && ` ${data.location}`}</li>
+              <li className="font-mono tracking-wider text-slate-400 ">{showInfo && ` ${data.result}`}</li>
+            </div>
+          ))}
 
-          <div className=" border p-4 shadow-lg rounded-lg mt-6 hover:transform hover:scale-105 ransition-all duration-500 ease-in-out">
-            <li className={`list-disc transition-all duration-500 ease-in-out animate-pulse text-2xl font-handwriting ${showInfo ? "mt-1 list-disc animate-none" : ""}`}>{showInfo && "Higher Secondary Certificate"}</li>
-            <li className="font-mono tracking-wider">{showInfo && " Shri N.P. Bhalodia High School, Junagadh"}</li>
-            <li className="font-mono tracking-wider">{showInfo && " Percentage: 58%"}</li>
-          </ div>
-
-          <div className=" border p-4 shadow-lg rounded-lg mt-6 hover:transform hover:scale-105 ransition-all duration-500 ease-in-out">
-             
-          <li className={`list-disc transition-all duration-500 ease-in-out animate-pulse text-2xl font-handwriting  ${showInfo ? "mt-1 list-disc animate-none" : ""}`}>{showInfo && "Secondary School Certificate"}</li>
-          <li className="font-mono tracking-wider">{showInfo && " Shri N.P. Bhalodia High School, Junagadh"}</li>
-          <li className="font-mono tracking-wider">{showInfo && " Percentage: 90%"}</li>
-          </div>
         </ul>
       </div>
     </div>

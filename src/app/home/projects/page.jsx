@@ -17,7 +17,7 @@ const ProjectPage = () => {
       </div>
       <div className="w-[70%] flex flex-col items-center">
         <div className=" ">
-        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14">Project</div>
+        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14  text-fuchsia-800">Project</div>
 
 
         </div>
