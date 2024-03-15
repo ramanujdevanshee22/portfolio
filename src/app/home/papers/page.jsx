@@ -4,7 +4,7 @@ import Image from "next/image";
 const PapersPage = () => {
   return (
     <div className="flex flex-col sm:flex-row h-screen absolute top-0 left-0 w-screen">
-      <div className="w-[30%]  bg-yellow-200 flex justify-center ">
+      <div className="sm:p-4 sm:w-[30%] sm:top-0 relative -top-16  bg-yellow-200 flex justify-center ">
         <Image priority
           src={Paper}
           alt="Background Image"

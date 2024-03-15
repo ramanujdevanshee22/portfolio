@@ -36,7 +36,7 @@ const EducationPage = () => {
         />
       </div>
 
-      <div className="w-[70%] flex flex-col items-center">
+      <div className="w-[70%] flex flex-col items-center pl-16">
         <div className="text-5xl underline underline-offset-4 font-semibold font-poppins mt-14 text-sky-950">Education</div>
 
         <ul className="mt-6">
