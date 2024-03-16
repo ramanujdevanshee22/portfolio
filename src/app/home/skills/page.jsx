@@ -37,7 +37,7 @@ const SkillsPage = () => {
       </div>
       <div className="w-[70%] flex flex-col gap-16 items-center pl-16">
 
-        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 mb-9 text-rose-900 ">Skills</div>
+        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14  text-rose-900 ">Skills</div>
 
         <div className=" p-6 flex flex-row flex-wrap gap-16">
           {Tech_1.map(tech => {

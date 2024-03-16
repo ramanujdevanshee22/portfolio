@@ -1,8 +1,14 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-// import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faHackerrank,
+} from "@fortawesome/free-brands-svg-icons";
+import LeetCodeIcon from "../../../public/leetcodesticekr.png";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -102,8 +108,49 @@ export default function NavBar() {
           >
             Certificates
           </Link>
+
+          <div className="flex">
+            {/* GitHub */}
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
+            >
+              <FontAwesomeIcon icon={faGithub} className="mr-2 h-8 " />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300  hover:text-black/45 px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="mr-2 h-8" />
+            </a>
+
+            {/* HackerRank */}
+            <a
+              href="https://hackerrank.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
+            >
+              <FontAwesomeIcon icon={faHackerrank} className="mr-2 h-8" />
+            </a>
+
+            {/* LeetCode */}
+            {/* <a
+              href="https://leetcode.com/yourusername" 
+              // target="_blank"
+              // rel="noopener noreferrer"
+              // className="text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
+            >
+              <img src={LeetCodeIcon} alt="LeetCode" className="mr-2 h-8" />
+            </a> */}
+          </div>
         </div>
-        {/* </div> */}
       </nav>
     </div>
   );
