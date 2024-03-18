@@ -9,6 +9,7 @@ import {
   faHackerrank,
 } from "@fortawesome/free-brands-svg-icons";
 import LeetCodeIcon from "../../../public/leetcodesticekr.png";
+import Image from "next/image";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -141,14 +142,14 @@ export default function NavBar() {
             </a>
 
             {/* LeetCode */}
-            {/* <a
+            <a
               href="https://leetcode.com/yourusername" 
               // target="_blank"
               // rel="noopener noreferrer"
               // className="text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
             >
-              <img src={LeetCodeIcon} alt="LeetCode" className="mr-2 h-8" />
-            </a> */}
+              <Image src={LeetCodeIcon} alt="LeetCode" className="mr-2 h-8" />
+            </a>
           </div>
         </div>
       </nav>
