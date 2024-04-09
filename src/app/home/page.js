@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="flex justify-center">
             {/* GitHub */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/ramanujdevanshee22"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"

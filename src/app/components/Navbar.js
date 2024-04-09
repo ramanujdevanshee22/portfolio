@@ -8,7 +8,7 @@ import {
   faLinkedin,
   faHackerrank,
 } from "@fortawesome/free-brands-svg-icons";
-import LeetCodeIcon from "../../../public/leetcodesticekr.png";
+import LeetCodeIcon from "../../../public/leetcode.png";
 import Image from "next/image";
 
 export default function NavBar() {
@@ -47,7 +47,7 @@ export default function NavBar() {
 
       <nav
         className={`bg-zinc-800 bg-opacity-70 absolute top-12 h-[93%] transition-all duration-1000 z-20 ${
-          open ? "left-0" : "-left-60"
+          open ? "left-0" : "-left-72"
         }`}
       >
         {/* <div className="mx-auto w-full px-4 sm:px-6 lg:px-8"> */}
@@ -57,12 +57,14 @@ export default function NavBar() {
             className={`text-gray-300 hover:bg-white/75  hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold ${
               pathName === "/home" ? "bg-white/30" : ""
             }`}
+            onClick={()=>setOpen(!open)}
           >
             Home
           </Link>
 
           <Link
             href="/home/education"
+            onClick={()=>setOpen(!open)}
             className={`${
               pathName === "/home/education" ? "bg-white/30" : ""
             } text-gray-300 hover:bg-white/75  hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold`}
@@ -71,6 +73,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/home/projects"
+            onClick={()=>setOpen(!open)}
             className={`${
               pathName === "/home/projects" ? "bg-white/30" : ""
             } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold`}
@@ -79,6 +82,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/home/experience"
+            onClick={()=>setOpen(!open)}
             className={`${
               pathName === "/home/experience" ? "bg-white/30" : ""
             } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold`}
@@ -87,6 +91,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/home/skills"
+            onClick={()=>setOpen(!open)}
             className={`${
               pathName === "/home/skills" ? "bg-white/30" : ""
             } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold`}
@@ -95,6 +100,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/home/papers"
+            onClick={()=>setOpen(!open)}
             className={`${
               pathName === "/home/papers" ? "bg-white/30" : ""
             } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold`}
@@ -103,6 +109,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/home/certificates"
+            onClick={()=>setOpen(!open)}
             className={`${
               pathName === "/home/certificates" ? "bg-white/30" : ""
             } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500  font-semibold`}
@@ -113,7 +120,7 @@ export default function NavBar() {
           <div className="flex">
             {/* GitHub */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/ramanujdevanshee22"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
@@ -141,15 +148,17 @@ export default function NavBar() {
               <FontAwesomeIcon icon={faHackerrank} className="mr-2 h-8" />
             </a>
 
+           
+
             {/* LeetCode */}
             <a
-              href="https://leetcode.com/yourusername" 
-              // target="_blank"
-              // rel="noopener noreferrer"
-              // className="text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
-            >
-              <Image src={LeetCodeIcon} alt="LeetCode" className="mr-2 h-8" />
-            </a>
+            href="https://leetcode.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
+          >
+            <Image src={LeetCodeIcon} alt="LeetCode" className="h-8 w-8 mr-2" />
+          </a>
           </div>
         </div>
       </nav>

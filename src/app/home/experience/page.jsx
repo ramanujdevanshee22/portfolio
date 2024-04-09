@@ -15,28 +15,28 @@ const ExperiencePage = () => {
         />
 
       </div>
-      <div className="w-[70%] flex flex-col items-center">
+      <div className="w-[70%] flex flex-col items-center pl-[7rem] sm:pl-6">
 
         <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-lime-800">Experience</div>
-        <div className="border border-orange-700 m-14">
-          <div className="flex items-center">
-            <span className=" text-base font-solid">ReactJs Intern</span>
+        <div className="order p-4 shadow-md shadow-slate-300 rounded-lg m-6 hover:transform hover:scale-95 transition-all duration-500 ease-in-out bg-lime-500 bg-opacity-10 flex gap-4 flex-col sm:w-auto">
+          <div className="flex items-center gap-4">
+            <span className=" font-handwriting text-2xl">ReactJs Intern</span>
             <hr className="flex-grow border-b-2 border-gray-300 mx-2 my-2" />
-            <span className=" text-base font-solid">May 2023 - June 2023</span>
+            <span className=" text-xl font-medium font-poppins">May 2023 - June 2023</span>
           </div>
 
-          <h3 className="font-display tracking-wider">📍TatvaSoft (Ahmedabad)</h3>
-          <span>Developed E-bookstore frontend with API integration for features such as adding, removing, updating, search books and adding/removing items to cart. </span>
+          <h3 className="font-mono tracking-widest">📍TatvaSoft (Ahmedabad)</h3>
+          <span className="font-display tracking-widest  ">Developed E-bookstore frontend with API integration for features such as adding, removing, updating, search books and adding/removing items to cart. </span>
           <div className="flex flex-row gap-3">
 
-            <div class="bg-gradient-to-br from-lime-500  to-yellow-300 text-white font-bold py-2 px-6 rounded-full shadow-lg">
+            <div class="bg-gradient-to-br from-lime-500  to-yellow-300 text-white font-bold py-1 px-3 rounded-lg shadow-lg">
               React
             </div>
 
-            <div class="bg-gradient-to-br from-lime-500 to-yellow-200 text-white font-bold py-2 px-6 rounded-full shadow-lg">
+            <div class="bg-gradient-to-br from-lime-500 to-yellow-200 text-white font-bold py-1 px-3 rounded-lg shadow-lg">
               Redux
             </div>
-            <div class="bg-gradient-to-br from-lime-500 to-yellow-200 text-white font-bold py-2 px-6 rounded-full shadow-lg">
+            <div class="bg-gradient-to-br from-lime-500 to-yellow-200 text-white font-bold py-1 px-3 rounded-lg shadow-lg">
               API
             </div>
           </div>
