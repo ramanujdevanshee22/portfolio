@@ -63,14 +63,14 @@ const ProjectPage = () => {
       <div className="w-[70%] flex flex-col items-center pl-[7rem] sm:pl-6">
         <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-fuchsia-800">Project</div>
 
-        <div className="flex flex-row items-center border-2 border-green-600 m-5 :h-svh sm:overflow-y-auto flex-wrap justify-center gap-14 sm:gap-24  scrollbar scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-slate-700 scrollbar-track-slate-300 ">
+        <div className="flex flex-row items-center m-5 :h-svh sm:overflow-y-auto flex-wrap justify-center gap-14 sm:gap-24  scrollbar scrollbar-thumb-rounded-full scrollbar-track-rounded-full  scrollbar-thumb-slate-700 scrollbar-track-slate-300 ">
 
 
 
           {projects.map(project =>
             <>
-              <div className="flex flex-col border-4 border-red-500 h-fit sm:h-full justify-center sm:flex-wrap sm:flex-row "  >
-                <div className="flex flex-row items-start gap-36 m-5 border-2 border-yellow-700 w-80 h-full">
+              <div className="flex flex-col  h-fit sm:h-full justify-center sm:flex-wrap sm:flex-row "  >
+                <div className="flex flex-row items-start gap-36 m-5 w-80 h-full">
                   <div className="group relative ">
                     <div className="flip-card-front bg-white p-6 rounded-lg shadow-gray-300 shadow-xl flex flex-col gap-7 h-full ">
                       <span className="font-handwriting text-2xl font-medium tracking-wide w-52 ">{project.name}
