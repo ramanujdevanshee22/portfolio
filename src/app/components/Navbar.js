@@ -10,6 +10,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import LeetCodeIcon from "../../../public/leetcode.png";
 import Image from "next/image";
+import Linkedin from "../../../public/linkedin.png";
+import HackerRank from "../../../public/hsckerrank.png";
+import Github from "../../../public/github.png";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -19,7 +22,7 @@ export default function NavBar() {
     <div className="z-30 ">
       <div
         onClick={() => setOpen(!open)}
-        className="p-4 space-y-2  bg-opacity-55 absolute top-0 left-0 z-20 "
+        className="p-4 space-y-2  bg-opacity-55 absolute top-0 left-0 z-20"
       >
         {open ? (
           <svg
@@ -38,9 +41,12 @@ export default function NavBar() {
           </svg>
         ) : (
           <>
+            <div className=" h-9 justify-center p-2 w-[3rem] bg-slate-900 rounded-lg">
             <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed"></span>
-            <span className="block w-8 h-1 bg-gray-100 rounded-xl"></span>
-            <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed"></span>
+            <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed mt-2" ></span>
+            <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed mt-4"></span>
+            </div>
+            
           </>
         )}
       </div>
@@ -107,7 +113,7 @@ export default function NavBar() {
           >
             Papers
           </Link>
-          <Link
+          {/* <Link
             href="/home/certificates"
             onClick={()=>setOpen(!open)}
             className={`${
@@ -115,9 +121,9 @@ export default function NavBar() {
             } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500  font-semibold`}
           >
             Certificates
-          </Link>
+          </Link> */}
 
-          <div className="flex">
+          <div className="flex gap-3">
             {/* GitHub */}
             <a
               href="https://github.com/ramanujdevanshee22"
@@ -127,6 +133,7 @@ export default function NavBar() {
             >
               <FontAwesomeIcon icon={faGithub} className="mr-2 h-8 " />
             </a>
+            {/* <Image src={Github} alt="Linkedinlogo" className="w-8 h-8 mt-1 rounded-lg"></Image> */}
 
             {/* LinkedIn */}
             <a
@@ -137,6 +144,8 @@ export default function NavBar() {
             >
               <FontAwesomeIcon icon={faLinkedin} className="mr-2 h-8" />
             </a>
+            {/* <Image src={Linkedin} alt="Linkedinlogo" className="w-10 h-10 rounded-lg"></Image> */}
+
 
             {/* HackerRank */}
             <a
@@ -144,21 +153,24 @@ export default function NavBar() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
-            >
+              >
               <FontAwesomeIcon icon={faHackerrank} className="mr-2 h-8" />
             </a>
+
+            {/* <Image src={HackerRank} alt="Linkedinlogo" className="w-10 h-10 rounded-lg"></Image> */}
+
 
            
 
             {/* LeetCode */}
-            <a
+            {/* <a
             href="https://leetcode.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
-          >
-            <Image src={LeetCodeIcon} alt="LeetCode" className="h-8 w-8 mr-2" />
-          </a>
+          > */}
+          {/* </a> */}
+            {/* <Image src={LeetCodeIcon} alt="LeetCode" className="h-10 w-10 mr-2" /> */}
           </div>
         </div>
       </nav>
