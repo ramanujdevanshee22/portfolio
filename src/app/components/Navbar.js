@@ -27,7 +27,7 @@ export default function NavBar() {
         {open ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-9 text-white "
+            className="h-8 w-9 text-white bg-slate-500 fixed rounded-lg"
             fill="none"
             viewBox="0 0 25 25"
             stroke="currentColor"
@@ -41,7 +41,7 @@ export default function NavBar() {
           </svg>
         ) : (
           <>
-            <div className=" h-9 justify-center p-2 w-[3rem] bg-slate-900 rounded-lg">
+            <div className=" h-9 justify-center p-2 w-[3rem] bg-slate-500 rounded-lg fixed">
             <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed"></span>
             <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed mt-2" ></span>
             <span className="block w-8 h-1 bg-gray-100 rounded-xl fixed mt-4"></span>
@@ -52,7 +52,7 @@ export default function NavBar() {
       </div>
 
       <nav
-        className={`bg-zinc-800 bg-opacity-70 absolute top-12 h-[93%] transition-all duration-1000 z-20 ${
+        className={`bg-zinc-800 bg-opacity-70 fixed top-12 h-[93%] transition-all duration-1000 z-20 ${
           open ? "left-0" : "-left-72"
         }`}
       >

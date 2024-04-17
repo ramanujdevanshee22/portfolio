@@ -79,7 +79,7 @@ const ProjectPage = () => {
       <div className="w-[70%] flex flex-col items-center pl-[7rem] sm:pl-6">
         <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-fuchsia-800">Projects</div>
 
-        <div className="flex flex-row items-center m-5 :h-svh sm:overflow-y-auto flex-wrap justify-center gap-14 sm:gap-24  scrollbar scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-md scrollbar-w-2 ">
+        <div className="flex flex-row items-center m-5 sm:h-svh sm:overflow-y-auto flex-wrap justify-center gap-14 sm:gap-24  scrollbar scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-md scrollbar-w-2 ">
 
 
 
@@ -112,7 +112,7 @@ const ProjectPage = () => {
                      
                       <div className="flex flex-col gap-5  ">
                         { project.redirect.map(btn=>
-                        <a href={btn.href} className="bg-gradient-to-br  from-fuchsia-400 to-sky-200 text-white font-bold py-3 px-4 rounded-lg shadow-lg text-center hover:scale-[1.1] transition-all duration-100 ease-in-out">{btn.btnName}</a>
+                        <a key={btn.href} href={btn.href} className="bg-gradient-to-br  from-fuchsia-400 to-sky-200 text-white font-bold py-3 px-4 rounded-lg shadow-lg text-center hover:scale-[1.1] transition-all duration-100 ease-in-out">{btn.btnName}</a>
                         )
                         }
                       </div>

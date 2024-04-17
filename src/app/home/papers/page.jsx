@@ -16,11 +16,17 @@ const PapersPage = () => {
 
       </div>
       <div className="w-[70%] flex flex-col items-center">
-        <div className=" ">
-        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14">Papers</div>
+     
+        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-yellow-500">Papers</div>
+
+          <div className="border-2 border-green-400 h-full w-full rounded-xl m-6 p-3">
+            <div>
+
+            </div>
+          </div>
 
 
-        </div>
+      
 
 
       </div>
