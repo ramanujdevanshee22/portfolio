@@ -113,6 +113,15 @@ export default function NavBar() {
           >
             Papers
           </Link>
+          <Link
+            href="/home/contactMe"
+            onClick={()=>setOpen(!open)}
+            className={`${
+              pathName === "/home/contactMe" ? "bg-white/30" : ""
+            } text-gray-300 hover:bg-white/75 hover:text-black px-3 py-2  text-lg tracking-wider transition-all duration-500 font-semibold`}
+          >
+            Contact Me
+          </Link>
           {/* <Link
             href="/home/certificates"
             onClick={()=>setOpen(!open)}
