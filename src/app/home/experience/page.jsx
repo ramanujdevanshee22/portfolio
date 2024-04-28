@@ -1,7 +1,16 @@
+'use client'
 import Experience from "../../../../public/experience.png";
+import InternshipCertificate from "../../../../public/Internship_Certificate.jpg";
 import Image from "next/image";
+import { useState } from "react";
 
 const ExperiencePage = () => {
+
+  const [showLightbox, setShowLightbox] = useState(false);
+
+  const handleLinkClick = () => {
+    setShowLightbox(!showLightbox);
+  };
   return (
     <div className="flex flex-col sm:flex-row h-screen absolute top-0 left-0 w-screen ">
       <div className="sm:p-4 sm:w-[30%] sm:top-0 relative -top-16 bg-lime-100 flex justify-center ">
@@ -25,6 +34,10 @@ const ExperiencePage = () => {
             <span className=" text-xl font-medium font-poppins">May 2023 - June 2023</span>
           </div>
 
+         
+          
+
+      
           <h3 className="font-mono tracking-widest">📍TatvaSoft (Ahmedabad)</h3>
           <span className="font-display tracking-widest  ">Developed E-bookstore frontend with API integration for features such as adding, removing, updating, search books and adding/removing items to cart. </span>
           <div className="flex flex-row gap-3">
@@ -40,13 +53,50 @@ const ExperiencePage = () => {
               API
             </div>
           </div>
+          <a href="#" onClick={handleLinkClick} className="text-slate-700 animate-pulse hover:underline underline-offset-4 cursor-pointer ">⮞ View Internship Certificate</a>
+        
+{/*           
+        <div className="relative w-full h-64 " onClick={handleImageClick}>  
+        <Image
+          src={InternshipCertificate}
+          alt="Internship Certificate"
+          layout="fill"
+          objectFit="contain"
+          className="cursor-pointer"
+        />
+      <div className="text-gray-500 text-sm font-bold">(Click to zoom in)</div>  
+        </div> */}
+
+          
+
+
+      
+     
 
         </div>
-
       </div>
 
-
-    </div>
+       {/* Lightbox */}
+      {showLightbox && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 overflow-auto">
+          <div className="max-w-3xl max-h-full">
+            <button
+              className="fixed top-3 right-5 text-white hover:text-gray-200 text-3xl"
+              onClick={handleLinkClick}
+            >
+            ❌
+            </button>
+            <Image
+              src={InternshipCertificate}
+              alt="Internship Certificate"
+              layout="responsive"
+              objectFit="contain"
+              className=""
+            />
+          </div>
+        </div>
+      )}
+</div>
 
   )
 }
