@@ -11,12 +11,23 @@ const EducationPage = () => {
   const [message, setMessage] = useState("");
 
   // Function to handle form submission
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
-   
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    const response = await fetch('/api/EmailService', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phoneNumber,
+        message
+      })
+    })
+    console.log(await response.json())
+  }
   return (
     <div className="flex flex-col sm:flex-row h-screen absolute top-0 left-0 w-screen">
       <div className="sm:w-[30%] sm:top-0 relative -top-16 bg-orange-100 flex justify-center ">

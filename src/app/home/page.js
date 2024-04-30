@@ -50,7 +50,7 @@ export default function HomePage() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/devanshee-ramanuj/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300  hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
@@ -60,7 +60,7 @@ export default function HomePage() {
 
             {/* HackerRank */}
             <a
-              href="https://hackerrank.com/yourusername"
+              href="https://www.hackerrank.com/profile/dhabu2212"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-black px-3 py-2 text-lg tracking-wider transition-all duration-500 font-semibold flex items-center"
