@@ -13,6 +13,8 @@ import Framer from "./assests/framer.png";
 import RestAPI from "./assests/rest-api.png";
 import WebRTC from "./assests/webrtc.png";
 import Axios from "./assests/Axios.png";
+import Lucia from "./assests/lucia_icon.png";
+import Cloudinary from "./assests/cloudinary.svg";
 
 import Link from "next/link";
 
@@ -21,15 +23,15 @@ import Link from "next/link";
 
 
 const projects = [
-  {
-    name: "Reporting and Resolution Portal - Collector & Citizens of Rajkot",
-    desc: "Developed web application for both, citizens and collector of Rajkot to attend online meets and many more.",
-    imgs: [ReactLogo, NextJS, MongoDB, GraphQl, NodeJS, Redux, TailwindCSS, SocketIO, Framer,],
-    redirect: [ {href: "https://tirth-reso-collector-portal.firebaseapp.com/", btnName: "Collector Demo"},
-    {href: "https://tirth-shah-reso-portal-project.firebaseapp.com/", btnName: "Citizen Demo"},
-    {href: "abc", btnName: "Github Repo"}
-   ]
-  },
+  // {
+  //   name: "Reporting and Resolution Portal - Collector & Citizens of Rajkot",
+  //   desc: "Developed web application for both, citizens and collector of Rajkot to attend online meets and many more.",
+  //   imgs: [ReactLogo, NextJS, MongoDB, GraphQl, NodeJS, Redux, TailwindCSS, SocketIO, Framer,],
+  //   redirect: [ {href: "https://tirth-reso-collector-portal.firebaseapp.com/", btnName: "Collector Demo"},
+  //   {href: "https://tirth-shah-reso-portal-project.firebaseapp.com/", btnName: "Citizen Demo"},
+  //   {href: "abc", btnName: "Github Repo"}
+  //  ]
+  // },
   {
     name: "Online Requisition Portal - Gujarat Govt.",
     desc: "Developed a portal for availing the Birth, Marriage and Death certificate virtually.",
@@ -44,16 +46,24 @@ const projects = [
     name: "E-book store.",
     desc: "Developed an application that provides an user-friendly experience for managing (CRUD) operations for user profiles, book information, cart orders, and categories.",
     imgs: [ReactLogo, MongoDB ,Redux, NodeJS, Axios ], 
-    redirect: [ {href: "https://www.geeksforgeeks.org/gate-corner-2-gq/", btnName: "Application"},
-    {href: "https://www.geeksforgeeks.org/gate-corner-2-gq/", btnName: "Github"}
+    redirect: [ {href: "https://e-book-store-dramanuj22.web.app/", btnName: "Application"},
+    {href: "https://github.com/ramanujdevanshee22/E-book-Selling", btnName: "Github"}
    ],
   },
   {
     name: "Virtual Marketplace.",
-    desc: "Developed a Portal for availing the Birth, Marriage and Death certificate virtually.",
-    imgs: [ReactLogo, MongoDB ,Redux, NodeJS,  ],
-    redirect: [ {href: "https://www.geeksforgeeks.org/gate-corner-2-gq/", btnName: "Demo"},
-    {href: "https://www.geeksforgeeks.org/gate-corner-2-gq/", btnName: "Code"}
+    desc: "CRUD operation using NodeJS",
+    imgs: [ReactLogo, MongoDB , NodeJS,  ],
+    redirect: [ 
+    {href: "https://github.com/ramanujdevanshee22/Virtual-Marketplace-backend", btnName: "Github"}
+   ],
+  },
+  {
+    name: "BlogBox",
+    desc: "Next.js blog app with Lucia authentication and Cloudinary for image uploads. Users can sign up, log in, view blogs, publish posts, and like or comment on entries.",
+    imgs: [NextJS, MongoDB, Lucia, TailwindCSS, Cloudinary  ],
+    redirect: [ 
+    {href: "https://github.com/ramanujdevanshee22/Blog-Box", btnName: "Github"}
    ],
   },
 
