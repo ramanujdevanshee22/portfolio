@@ -1,6 +1,5 @@
 'use server'
-import nodemailer from 'nodemailer'
-
+import nodemailer from 'nodemailer';
 
 const MAIL_HOST_CONFIG = {
   service: "gmail",
@@ -9,11 +8,10 @@ const MAIL_HOST_CONFIG = {
     pass: process.env.MAIL_KEY,
   },
 };
+
 const TRANSPORTER = nodemailer.createTransport(MAIL_HOST_CONFIG);
-export async function sendMail(data) {
-    console.log(data);
-    const formDataObj = Object.fromEntries(data.entries());
-    const { username, number, email, message} = formDataObj;
+
+export async function sendMail(username,message,email,number) { 
     try {
         const msg = {
           from: process.env.MAIL_USER,
@@ -23,10 +21,10 @@ export async function sendMail(data) {
         };
         await TRANSPORTER.sendMail(msg);
         console.log(`Mail sent successfully to: ${msg.to}`);
-        return  true;
+        return {message:"Mail sent successfully to "}
       } catch (error) {
         console.log(error);
-        throw new Error('Failed to send email');
+        return {error:'Failed to send email'};
       }
    
 }

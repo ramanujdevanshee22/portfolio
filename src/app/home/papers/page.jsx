@@ -11,27 +11,24 @@ const PapersPage = () => {
   const handleLinkClick = () => {
     setShowLightbox(!showLightbox);
   };
+  
   return (
-
-
     <div className="flex flex-col sm:flex-row h-screen absolute top-0 left-0 w-screen">
-      <div className="sm:p-4 sm:w-[30%] sm:top-0 relative -top-16  bg-yellow-200 flex justify-center ">
-        <Image priority
+      {/* Yellow Box - Responsive Adjustments */}
+      <div className="sm:p-4 sm:w-[30%] w-full h-64 sm:h-full relative sm:top-0 top-0 bg-yellow-200 flex justify-center">
+        <Image
+          priority
           src={Paper}
           alt="Background Image"
-          // layout="fill"
-          // objectFit="cover"
-
-          className="  object-cover w-full h-full "
+          className="object-cover w-full h-full"
         />
-
       </div>
-      <div className="w-[70%] flex flex-col items-center">
+      
+      <div className="w-[70%] sm:w-full border-4 border-red-700 flex flex-col items-center px-4 sm:pl-6 " >
+        <div className="text-4xl underline underline-offset-4 font-semibold font-poppins mt-14 text-yellow-500 ">Papers</div>
 
-        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-yellow-500">Papers</div>
-
-        <div className="sm:h-full sm:w-full w-screen rounded-xl m-6 p-3">
-          <div className="border p-4 shadow-md shadow-slate-600 rounded-lg mt-6 ml-20 hover:transform hover:scale-105 transition-all duration-500 ease-in-out bg-yellow-400 bg-opacity-10 flex flex-col sm:w-[80%] w-full justify-center gap-4">
+        <div className="sm:h-full sm:w-full w-full rounded-xl m-6 p-3">
+          <div className="border p-4 shadow-md shadow-slate-600 rounded-lg mt-6 hover:transform hover:scale-105 transition-all duration-500 ease-in-out bg-yellow-400 bg-opacity-10 flex flex-col sm:w-[80%] w-full justify-center gap-4">
             <div className="transition-all duration-500 ease-in-out text-black/40 tracking-widest text-sm font-bold font-display">Survey Paper</div>
             <div className="text-3xl font-handwriting text-black">A Comprehensive Review on Integration of Blockchain and IoT</div>
             <hr className="border-gray-300 " />
@@ -60,43 +57,31 @@ const PapersPage = () => {
               </button>
             </div>
           </div>
-
-
-
-
         </div>
-        <div>
 
-
-
-
-
-        </div>
-      </div>
-       {/* Lightbox */}
-       {showLightbox && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 overflow-auto">
-          <div className="max-w-3xl max-h-full">
-            <button
-              className="fixed top-3 right-5 text-white hover:text-gray-200 text-3xl"
-              onClick={handleLinkClick}
-            >
-            ❌
-            </button>
-            <Image
-              src={SurveyCerti}
-              alt="Internship Certificate"
-              layout="responsive"
-              objectFit="contain"
-              className=""
-            />
+        {/* Lightbox */}
+        {showLightbox && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 overflow-auto">
+            <div className="max-w-3xl max-h-full">
+              <button
+                className="fixed top-3 right-5 text-white hover:text-gray-200 text-3xl"
+                onClick={handleLinkClick}
+              >
+                ❌
+              </button>
+              <Image
+                src={SurveyCerti}
+                alt="Internship Certificate"
+                layout="responsive"
+                objectFit="contain"
+                className=""
+              />
+            </div>
           </div>
-        </div>)}
-
-
-
+        )}
+      </div>
     </div>
   )
 }
 
-export default PapersPage
+export default PapersPage;

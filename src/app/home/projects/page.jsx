@@ -19,7 +19,7 @@ import Cloudinary from "./assests/cloudinary.svg";
 import Link from "next/link";
 
 
-//Add e-book store and enhance virtual marketplace.
+
 
 
 const projects = [
@@ -33,6 +33,22 @@ const projects = [
   //  ]
   // },
   {
+    name: "E-book store.",
+    desc: "Developed an application that provides an user-friendly experience for managing (CRUD) operations for user profiles, book information, cart orders, and categories.",
+    imgs: [ReactLogo, MongoDB ,Redux, NodeJS, Axios ], 
+    redirect: [ {href: "https://e-book-store-dramanuj22.web.app/", btnName: "Demo"},
+    {href: "https://github.com/ramanujdevanshee22/E-book-Selling", btnName: "Github"}
+   ],
+  },
+  {
+    name: "BlogBox",
+    desc: "Next.js blog app with Lucia authentication and Cloudinary for image uploads. Users can sign up, log in, view blogs, publish blogs, and like or comment on entries.",
+    imgs: [NextJS, MongoDB, Lucia, TailwindCSS, Cloudinary  ],
+    redirect: [ 
+    {href: "https://github.com/ramanujdevanshee22/Blog-Box", btnName: "Github"}
+   ],
+  },
+  {
     name: "Online Requisition Portal - Gujarat Govt.",
     desc: "Developed a portal for availing the Birth, Marriage and Death certificate virtually.",
     imgs: [ReactLogo,  MongoDB, SocketIO, NodeJS, Redux, WebRTC,  Framer, RestAPI ],
@@ -42,14 +58,7 @@ const projects = [
     
    ],
   },
-  {
-    name: "E-book store.",
-    desc: "Developed an application that provides an user-friendly experience for managing (CRUD) operations for user profiles, book information, cart orders, and categories.",
-    imgs: [ReactLogo, MongoDB ,Redux, NodeJS, Axios ], 
-    redirect: [ {href: "https://e-book-store-dramanuj22.web.app/", btnName: "Application"},
-    {href: "https://github.com/ramanujdevanshee22/E-book-Selling", btnName: "Github"}
-   ],
-  },
+
   {
     name: "Virtual Marketplace.",
     desc: "CRUD operation using NodeJS",
@@ -58,17 +67,6 @@ const projects = [
     {href: "https://github.com/ramanujdevanshee22/Virtual-Marketplace-backend", btnName: "Github"}
    ],
   },
-  {
-    name: "BlogBox",
-    desc: "Next.js blog app with Lucia authentication and Cloudinary for image uploads. Users can sign up, log in, view blogs, publish posts, and like or comment on entries.",
-    imgs: [NextJS, MongoDB, Lucia, TailwindCSS, Cloudinary  ],
-    redirect: [ 
-    {href: "https://github.com/ramanujdevanshee22/Blog-Box", btnName: "Github"}
-   ],
-  },
-
-
-
 ]
 
 
