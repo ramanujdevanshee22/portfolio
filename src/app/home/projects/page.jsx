@@ -1,6 +1,5 @@
 import Project from "../../../../public/project2 (1).png";
 
-import Image from "next/image";
 import ReactLogo from "./assests/react.png";
 import NextJS from "./assests/nextjs.png";
 import MongoDB from "./assests/mongodb.png";
@@ -15,12 +14,7 @@ import WebRTC from "./assests/webrtc.png";
 import Axios from "./assests/Axios.png";
 import Lucia from "./assests/lucia_icon.png";
 import Cloudinary from "./assests/cloudinary.svg";
-
-import Link from "next/link";
-
-
-
-
+import Image from "next/image";
 
 const projects = [
   // {
@@ -33,48 +27,80 @@ const projects = [
   //  ]
   // },
   {
-    name: "E-book store.",
+    name: "E-book store",
     desc: "Developed an application that provides an user-friendly experience for managing (CRUD) operations for user profiles, book information, cart orders, and categories.",
-    imgs: [ReactLogo, MongoDB ,Redux, NodeJS, Axios ], 
-    redirect: [ {href: "https://e-book-store-dramanuj22.web.app/", btnName: "Demo"},
-    {href: "https://github.com/ramanujdevanshee22/E-book-Selling", btnName: "Github"}
-   ],
+    imgs: [ReactLogo, MongoDB, Redux, NodeJS, Axios],
+    redirect: [
+      { href: "https://e-book-store-dramanuj22.web.app/", btnName: "Demo" },
+      {
+        href: "https://github.com/ramanujdevanshee22/E-book-Selling",
+        btnName: "Github",
+      },
+    ],
   },
   {
     name: "BlogBox",
     desc: "Next.js blog app with Lucia authentication and Cloudinary for image uploads. Users can sign up, log in, view blogs, publish blogs, and like or comment on entries.",
-    imgs: [NextJS, MongoDB, Lucia, TailwindCSS, Cloudinary  ],
-    redirect: [ 
-    {href: "https://github.com/ramanujdevanshee22/Blog-Box", btnName: "Github"}
-   ],
+    imgs: [NextJS, MongoDB, Lucia, TailwindCSS, Cloudinary],
+    redirect: [
+      {
+        href: "https://blog-box-nextjs-ramanujdevanshee22.vercel.app/",
+        btnName: "Demo",
+      },
+      {
+        href: "https://github.com/ramanujdevanshee22/Blog-Box",
+        btnName: "Github",
+      },
+    ],
   },
   {
-    name: "Online Requisition Portal - Gujarat Govt.",
+    name: "Hackathon 2022",
     desc: "Developed a portal for availing the Birth, Marriage and Death certificate virtually.",
-    imgs: [ReactLogo,  MongoDB, SocketIO, NodeJS, Redux, WebRTC,  Framer, RestAPI ],
-    redirect: [ {href: "https://orp-gujgovt-citz-tirthshah0212.web.app/", btnName: "Collector-Demo"},
-    {href: "https://orp-gujgovt-tirthshah012.web.app/", btnName: "Citizen-Demo"},
-    {href: "cde", btnName: "Github Repo"},
-    
-   ],
+    imgs: [
+      ReactLogo,
+      MongoDB,
+      SocketIO,
+      NodeJS,
+      Redux,
+      WebRTC,
+      Framer,
+      RestAPI,
+    ],
+    redirect: [
+      {
+        href: "https://hackathon-2022-government.netlify.app/",
+        btnName: "Government-Demo",
+      },
+      {
+        href: "https://hackathon-2022-citizen.netlify.app/",
+        btnName: "Citizen-Demo",
+      },
+      {
+        href: "https://github.com/ramanujdevanshee22/Hackathon-2022-Citizen",
+        btnName: "Github Repo",
+      },
+    ],
   },
 
   {
     name: "Virtual Marketplace.",
     desc: "CRUD operation using NodeJS",
-    imgs: [ReactLogo, MongoDB , NodeJS,  ],
-    redirect: [ 
-    {href: "https://github.com/ramanujdevanshee22/Virtual-Marketplace-backend", btnName: "Github"}
-   ],
+    imgs: [ReactLogo, MongoDB, NodeJS],
+    redirect: [
+      {
+        href: "https://github.com/ramanujdevanshee22/Virtual-Marketplace-backend",
+        btnName: "Github",
+      },
+    ],
   },
-]
-
+];
 
 const ProjectPage = () => {
   return (
-    <div className="flex flex-col sm:flex-row h-screen absolute top-0 left-0 w-screen">
+    <div className="flex flex-col sm:flex-row h-screen absolute top-0 left-0 w-screen overflow-x-hidden">
       <div className="sm:p-4 sm:w-[30%] sm:top-0 relative -top-16 bg-fuchsia-200 flex justify-center ">
-        <Image priority
+        <Image
+          priority
           src={Project}
           alt="Background Image"
           // layout="fill"
@@ -83,60 +109,48 @@ const ProjectPage = () => {
         />
       </div>
 
+      <div className="w-[70%] flex flex-col items-center ml-5 gap-5 h-[calc(100dvh)]">
+        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-fuchsia-800">
+          Projects
+        </div>
 
-      <div className="w-[70%] flex flex-col items-center pl-[7rem] sm:pl-6">
-        <div className="text-4xl underline underline-offset-4 font-bold font-poppins mt-14 text-fuchsia-800">Projects</div>
-
-        <div className="flex flex-row items-center m-5 sm:h-svh sm:overflow-y-auto flex-wrap justify-center gap-14 sm:gap-24  scrollbar scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-md scrollbar-w-2 ">
-
-
-
-          {projects.map(project =>
-            <>
-              <div className="flex flex-col  h-fit sm:h-full justify-center sm:flex-wrap sm:flex-row "  >
-                <div className="flex flex-row items-start gap-36 m-5 w-80 ">
-                  <div className="group relative ">
-                    <div className="flip-card-front bg-fuchsia-100 p-6 rounded-lg shadow-gray-300 shadow-xl flex flex-col gap-7 h-[30rem] ">
-                      <span className="font-handwriting text-2xl font-medium tracking-wide w-52 ">{project.name}
-                      </span>
-                      <span className="font-poppins tracking-widest text-gray-500">{project.desc} </span>
-                      <div className="flex flex-row gap-4 flex-wrap">
-                        {project.imgs.map((img) => (
-                          <img
-                            key={img.src}
-                            src={img.src}
-                            alt="React Logo"
-                            className="w-10 h-10"
-                          />
-                        ))}
-
-                      </div>
+        <div className="flex flex-row flex-wrap justify-center gap-x-10 gap-y-5">
+          {projects.map((project) => {
+            return (
+              <div
+                key={project.name}
+                className="w-[20rem] min-h-[17rem] bg-fuchsia-100 rounded-lg p-4 flex flex-col gap-7"
+              >
+                <h1 className="font-medium text-3xl font-handwriting">
+                  {project.name}
+                </h1>
+                <div className="w-full gap-x-7 gap-y-4 flex flex-row flex-wrap">
+                  {project.imgs.map((img) => (
+                    <div className="relative w-7 h-7" key={img}>
+                      <Image src={img} alt="tech" fill />
                     </div>
-
-                    {/* Back side of the flip card */}
-                    <div className="flip-card-back bg-white p-6 rounded-lg shadow-lg absolute top-0 left-0 w-full h-full backface-hidden opacity-0 rotate-y-180 transition duration-500 ease-in-out group-hover:opacity-100 flex items-center justify-center">
-                      {/* Content for the back side if needed */}
-                   
-                     
-                      <div className="flex flex-col gap-5  ">
-                        { project.redirect.map(btn=>
-                        <a key={btn.href} href={btn.href} className="bg-gradient-to-br  from-fuchsia-400 to-sky-200 text-white font-bold py-3 px-4 rounded-lg shadow-lg text-center hover:scale-[1.1] transition-all duration-100 ease-in-out">{btn.btnName}</a>
-                        )
-                        }
-                      </div>
+                  ))}
+                </div>
+                <div className="flex flex-col gap-5">
+                  {project.redirect.map((link) => (
+                    <div className="flex flex-row gap-2" key={link.href}>
+                      <a
+                        target="_blank"
+                        href={link.href}
+                        className="text-blue-500 underline underline-offset-2"
+                      >
+                        {link.btnName.toLowerCase()}
+                      </a>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </>
-
-
-          )}
-
+            );
+          })}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProjectPage;
